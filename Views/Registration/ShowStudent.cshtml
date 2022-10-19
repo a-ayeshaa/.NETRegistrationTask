@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "ShowStudent";
+}
+@model List<LabTaskRegistration.DB.Student>
+<h3>
+    <a href="/Registration/AddStudent" class="btn btn-info">Add Student</a> <a href="/Registration/ShowStudent" class="btn btn-info">Show Student</a>
+    <a href="/Registration/AddCourse" class="btn btn-info">Add Course</a> <a href="/Registration/ShowCourse" class="btn btn-info">Show Course</a>
+
+</h3>
+<h2>Show Student</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Id</th>
+        <th>Cgpa</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        <th>PreRegistration</th>
+    </tr>
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.Name</td>
+            <td>@s.Student_id</td>
+            <td>@s.Cgpa</td>
+            <td><a href="/Registration/Edit/@s.id" class="btn btn-info">Edit</a></td>
+            <td><a href="/Registration/Delete/@s.id" class="btn btn-info">Delete</a></td>
+            <td><a href="/Registration/Registration/@s.id" class="btn btn-info">Registration</a></td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "ShowCourse";
+}
+
+<h3>
+    <a href="/Registration/AddStudent" class="btn btn-info">Add Student</a> <a href="/Registration/ShowStudent" class="btn btn-info">Show Student</a>
+    <a href="/Registration/AddCourse" class="btn btn-info">Add Course</a> <a href="/Registration/ShowCourse" class="btn btn-info">Show Course</a>
+
+</h3>
+<h2>Show Course</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Pre Request</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.Name</td>
+            <td>@s.PreReq</td>
+            <td><a href="/Registration/EditCourse/@s.id" class="btn btn-info">Edit</a></td>
+            <td><a href="/Registration/DeleteCourse/@s.id" class="btn btn-info">Delete</a></td>
+        </tr>
+    }
+
+</table>
+

@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "EditCourse";
+}
+
+<h3>
+    <a href="/Registration/AddStudent" class="btn btn-info">Add Student</a> <a href="/Registration/ShowStudent" class="btn btn-info">Show Student</a>
+    <a href="/Registration/AddCourse" class="btn btn-info">Add Course</a> <a href="/Registration/ShowCourse" class="btn btn-info">Show Course</a>
+</h3>
+<h2>Edit</h2>
+
+<form action="" method="post">
+    <input type="text" class="form-control" name="Name" value="@Model.Name" />
+    <input type="text" class="form-control" name="Student_id" value="@Model.Student_id" />
+    <input type="text" class="form-control" name="Cgpa" value="@Model.Cgpa" />
+    <input type="submit" value="EDIT STUDENT" class="form-control" />
+</form>
+
