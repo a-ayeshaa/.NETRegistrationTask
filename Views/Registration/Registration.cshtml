@@ -2,15 +2,21 @@
 @{
     ViewBag.Title = "Registration";
 }
-@model List<LabTaskRegistration.DB.CourseStudent>
+@*@model List<LabTaskRegistration.DB.CourseStudent>*@
+@model List<LabTaskRegistration.DB.Cours>
+
 <h2>Registration</h2>
 
 <form action="" method="post">
     <ul>
         @foreach (var item in Model)
         {
-            <li><input type="checkbox" name="courses[]" value="@item.id"> @item.Cours.Name </li>
+            if (item.CourseStudents.Count != 40)
+            {
+                <li><input type="checkbox" name="courses[]" value="@item.id"> @item.Name | @item.CourseStudents.Count</li>
+
+            }
         }
     </ul>
-    <input type="submit" value="register" />
+    <input type="submit" value="Register" />
 </form>

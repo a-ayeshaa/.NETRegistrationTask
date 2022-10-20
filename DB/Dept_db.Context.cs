@@ -13,10 +13,10 @@ namespace LabTaskRegistration.DB
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Dept_DBEntities : DbContext
+    public partial class Dept_DBEntities1 : DbContext
     {
-        public Dept_DBEntities()
-            : base("name=Dept_DBEntities")
+        public Dept_DBEntities1()
+            : base("name=Dept_DBEntities1")
         {
         }
     

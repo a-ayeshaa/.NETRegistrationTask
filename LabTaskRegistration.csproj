@@ -129,37 +129,37 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="DB\Cours.cs">
-      <DependentUpon>Registration_db.tt</DependentUpon>
+      <DependentUpon>Dept_db.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\CourseFaculty.cs">
-      <DependentUpon>Registration_db.tt</DependentUpon>
+      <DependentUpon>Dept_db.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\CourseStudent.cs">
-      <DependentUpon>Registration_db.tt</DependentUpon>
+      <DependentUpon>Dept_db.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Department.cs">
-      <DependentUpon>Registration_db.tt</DependentUpon>
+      <DependentUpon>Dept_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Dept_db.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dept_db.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Dept_db.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dept_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Dept_db.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dept_db.edmx</DependentUpon>
     </Compile>
     <Compile Include="DB\Faculty.cs">
-      <DependentUpon>Registration_db.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\Registration_db.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Registration_db.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\Registration_db.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Registration_db.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\Registration_db.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Registration_db.edmx</DependentUpon>
+      <DependentUpon>Dept_db.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Student.cs">
-      <DependentUpon>Registration_db.tt</DependentUpon>
+      <DependentUpon>Dept_db.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -171,15 +171,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="DB\Registration_db.Context.tt">
+    <Content Include="DB\Dept_db.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Registration_db.Context.cs</LastGenOutput>
-      <DependentUpon>Registration_db.edmx</DependentUpon>
+      <DependentUpon>Dept_db.edmx</DependentUpon>
+      <LastGenOutput>Dept_db.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DB\Registration_db.tt">
+    <Content Include="DB\Dept_db.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Registration_db.edmx</DependentUpon>
-      <LastGenOutput>Registration_db.cs</LastGenOutput>
+      <DependentUpon>Dept_db.edmx</DependentUpon>
+      <LastGenOutput>Dept_db.cs</LastGenOutput>
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -187,12 +187,12 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="DB\Registration_db.edmx">
+    <EntityDeploy Include="DB\Dept_db.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Registration_db.Designer.cs</LastGenOutput>
+      <LastGenOutput>Dept_db.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="DB\Registration_db.edmx.diagram">
-      <DependentUpon>Registration_db.edmx</DependentUpon>
+    <Content Include="DB\Dept_db.edmx.diagram">
+      <DependentUpon>Dept_db.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

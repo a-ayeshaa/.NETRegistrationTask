@@ -23,7 +23,7 @@ namespace LabTaskRegistration.DB
         public int id { get; set; }
         public string Name { get; set; }
         public Nullable<int> DeptID { get; set; }
-        public string PreReq { get; set; }
+        public Nullable<int> PreReq { get; set; }
     
         public virtual ICollection<CourseFaculty> CourseFaculties { get; set; }
         public virtual Department Department { get; set; }

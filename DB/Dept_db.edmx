@@ -20,7 +20,7 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="DeptID" Type="int" />
-          <Property Name="PreReq" Type="varchar" MaxLength="50" />
+          <Property Name="PreReq" Type="int" />
         </EntityType>
         <EntityType Name="CourseStudents">
           <Key>
@@ -200,7 +200,7 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DeptID" Type="Int32" />
-          <Property Name="PreReq" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PreReq" Type="Int32" />
           <NavigationProperty Name="CourseFaculties" Relationship="Self.FK_CourseFaculties_Courses" FromRole="Courses" ToRole="CourseFaculties" />
           <NavigationProperty Name="Department" Relationship="Self.FK_Courses_Departments" FromRole="Courses" ToRole="Departments" />
           <NavigationProperty Name="CourseStudents" Relationship="Self.FK_CourseStudents_Courses" FromRole="Courses" ToRole="CourseStudents" />
@@ -334,7 +334,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Dept_DBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Dept_DBEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CourseFaculties" EntityType="Self.CourseFaculty" />
           <EntitySet Name="Courses" EntityType="Self.Cours" />
           <EntitySet Name="CourseStudents" EntityType="Self.CourseStudent" />
@@ -375,7 +375,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Dept_DBModelStoreContainer" CdmEntityContainer="Dept_DBEntities">
+        <EntityContainerMapping StorageEntityContainer="Dept_DBModelStoreContainer" CdmEntityContainer="Dept_DBEntities1">
           <EntitySetMapping Name="CourseFaculties">
             <EntityTypeMapping TypeName="Dept_DBModel.CourseFaculty">
               <MappingFragment StoreEntitySet="CourseFaculties">
